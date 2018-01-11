@@ -2,7 +2,7 @@
 // DATA
 // Below data will hold all of the Friends.
 // ===============================================================================
-var friends = [];
+var friendsArray = [];
 
 // Export the friends array
-module.exports = friends;
+module.exports = friendsArray;

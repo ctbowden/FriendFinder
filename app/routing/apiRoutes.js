@@ -2,8 +2,8 @@
 // LOAD DATA
 // We are linking our routes to the friends.js file
 // ===============================================================================
-
-var friends = require("../app/data/friends");
+var path = require("path");
+var friends = require("../data/friends.js");
 
 
 // ===============================================================================
