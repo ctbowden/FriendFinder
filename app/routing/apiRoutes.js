@@ -4,7 +4,6 @@
 // ===============================================================================
 var path = require("path");
 var friends = require("../data/friends.js");
-
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -44,25 +43,34 @@ module.exports = function(app) {
       for (var j = 0; j < newFriendScores.length; j++) {
         // Running total of our difference between our scores
         scratchPaper += (Math.abs(parseInt(friends[i].scores[j]) - parseInt(newFriendScores[j])));
-      }
+      };
+
       // Push our difference between our new submission's scores and this loop's scores
       scoresArray.push(scratchPaper);
     };
 
-    for (var i = 0; i < scoresArray.length; i++) {
-      if(scoresArray[i] <= scoresArray[matchMade]) {
-        matchMade = scoresArray[i];
-      }
-    }
+    var bff = 0;
+    var scoreCompare = 50;
     //Logic to determine which friend best fits our match
+    for (var i = 0; i < scoresArray.length; i++) {
+      if (scoresArray[i] <= scoreCompare) {
+        scoreCompare = scoresArray[i];
+        bff = i;
+      }
 
+    };
+
+
+    console.log(friends[bff]);
 
 
     // Response to the webpage with JSON data to populate FriendMatch
-    res.json();
+    res.json(friends[bff]);
 
+    console.log(req.body);
     // Add Current User to our Friends Data
     friends.push(req.body);
 
   
   });
+};
