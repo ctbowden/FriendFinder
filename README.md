@@ -33,6 +33,3 @@ FriendFinder is an application that surveys users to determine compatibility bet
 		-- A POST route '/api/friends'.  This route handles incoming survey results, pushing those results to our friends variable and our logic to return our compatibility logic for our app.
 
 
-
-### Demo Video
-
