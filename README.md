@@ -8,6 +8,8 @@ FriendFinder is an application that surveys users to determine compatibility bet
 
 ## Node.js and JS files
 
+View Live: https://aqueous-caverns-64579.herokuapp.com
+
 ### Requires NPM packages 'express', 'body-parser' and 'path'.
 
 - server.js 
